@@ -1,0 +1,75 @@
+<nav class="navbar navbar-light bg-transparent">
+  <div class="container-fluid">
+    
+    <!-- Logo Start -->
+    <a class="navbar-brand" href="#">
+      <img class="img-fluid logo" src="../../../assets/images/logo/logo.png" alt="">
+    </a>
+    <!-- Logo End -->
+
+    <!-- Social Icons Start --> 
+    <ul class="social-icons-list navbar-right">
+      <app-social-icons></app-social-icons>
+    </ul>
+    <!-- Social Icons End -->
+
+   <!-- Toggle Button Start --> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <div class="menu-icon">
+        <p class="line"></p>
+        <p class="line"></p>
+        <p class="line"></p>
+      </div>
+    </button>
+    <!-- Toggle Button End -->
+
+    <!-- Offcanvas Start --> 
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <img class="img-fluid red-lines" src="../../../assets/images/banner/impeka-lines.png" alt="">
+      <img class="img-fluid blue-line" src="../../../assets/images/banner/impeka-line.png" alt="">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+          <img src="../../../assets/images/logo/logo.png" class="logo-menu" alt="">
+        </h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dealerships</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Accessories</a>
+          </li>
+          <li class="mt-5">
+            <button class="btn main-btn" type="submit">Post your ad<i class="fas fa-arrow-right"></i></button>
+          </li>
+        </ul>
+      </div>
+      <!-- Offcanvas End -->
+
+      <hr class="line-body-footer">
+
+      <!-- Footer Start -->
+      <div class="offcanvas-footer">
+        <h6 class="mt-4">Customer Support Service</h6>
+        <span>
+          <i class="far fa-envelope"></i>
+                turbo@gmail.com
+        </span>
+      </div>
+      <!-- Footer End -->
+    </div>
+
+  </div>
+</nav>

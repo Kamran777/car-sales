@@ -1,0 +1,145 @@
+@import "../../app.component.scss";
+
+/// NAVBAR
+
+nav {
+  margin-top: 2%;
+  .social-icons-list {
+    flex-wrap: wrap;
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    height: 50px;
+  }
+}
+
+.navbar-toggler {
+  display: block;
+  background-color: $color-light;
+  @include wh(50px, 50px);
+  border: $border-none;
+  border-radius: $border-radius-rounded;
+  margin-left: 3%;
+  color: transparent;
+  .menu-icon {
+    text-align: -webkit-center;
+    &:hover {
+      .line:first-child {
+        @include hamburger-menu-icon-line(10px, -10px);
+        @include for-phone-only {
+          @include hamburger-menu-icon-line(7px, -8px);
+        }
+      }
+      .line:last-child {
+        @include hamburger-menu-icon-line(20px, 0px);
+        @include for-phone-only {
+          @include hamburger-menu-icon-line(15px, 0px);
+        }
+      }
+    }
+    .line {
+      @include wh(20px, 2px);
+      background-color: $color-dark;
+      margin-bottom: 4px;
+      border-radius: $border-radius-md;
+      transition: $transition-sm;
+      @include for-phone-only {
+        @include wh(15px, 2px);
+      }
+    }
+    .line:last-child {
+      @include hamburger-menu-icon-line(10px, -10px);
+      @include for-phone-only {
+        @include hamburger-menu-icon-line(7px, -8px);
+      }
+    }
+  }
+  @include for-phone-only {
+    @include wh(40px, 40px);
+  }
+}
+
+/// OFFCANVAS
+
+.offcanvas{
+  border: $border-none;
+}
+
+.offcanvas-body {
+  ul {
+    text-align: center;
+    li {
+      padding: 10px 0px;
+      color: $color-dark;
+      @include for-phone-only {
+        padding: 5px 0px;
+      }
+      .main-btn {
+        @include box-shadow-btn($main-color);
+        padding: 10px 82px;
+        height: auto;
+        position: relative;
+        z-index: 1;
+        &:hover {
+          @include box-shadow-btn($color-blue);
+        }
+        &:focus {
+          outline: 0 !important;
+        }
+        i {
+          margin-left: 10px;
+        }
+        @include for-phone-only {
+          padding: 7px 59px;
+        }
+      }
+      a {
+        color: $color-dark;
+        &:hover {
+          color: $main-color;
+          transition: $transition-sm;
+        }
+      }
+    }
+  }
+}
+
+.btn-close {
+  transition: $transition-sm;
+  &:hover {
+    transform: rotate(360deg);
+    transition: $transition-sm;
+  }
+  &:focus{
+    outline: none;
+  }
+}
+
+.offcanvas-footer {
+  text-align: center;
+  margin-bottom: 9%;
+  span {
+    position: relative;
+    top: 15px;
+  }
+  i {
+    margin-right: 2%;
+    position: relative;
+    top: 2.8px;
+    color: $main-color;
+    &:hover {
+      color: $color-blue;
+      transition: $transition-sm;
+    }
+  }
+}
+
+/// BACKGROUND IMAGES
+
+.red-lines {
+  @include bg-images(17%, 48%);
+}
+
+.blue-line {
+  @include bg-images(11%, 48%);
+}

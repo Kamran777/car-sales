@@ -1,0 +1,118 @@
+@import "./shared/scss/colors";
+@import "./shared/scss/fonts";
+@import "./shared/scss/mixin";
+@import "./shared/scss/animations";
+@import "./shared/scss/borders";
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  font-family: $font-family;
+}
+
+/// LOGO
+
+.logo {
+  @include wh(190px, 50px);
+  @include for-phone-only {
+    @include wh(140px, 40px);
+  }
+}
+
+.logo-menu {
+  @include wh(150px, 40px);
+}
+
+/// ICONS
+
+.main-icons {
+  display: flex;
+  li {
+    margin: 15px;
+    list-style-type: none;
+    a {
+      color: $color-dark;
+      font-size: $font-size-main-icon;
+      display: inline-block;
+      text-decoration: none;
+      i {
+        font-size: $font-size-main-icon;
+        &:hover {
+          color: $color-blue;
+          transition: $transition-sm;
+        }
+      }
+    }
+  }
+
+  @include for-phone-only {
+    display: none;
+  }
+}
+
+/// COMMON
+
+a,
+i {
+  cursor: pointer;
+}
+
+/// TYPOGRAPHY
+
+h5,h6 {
+  font-weight: $font-weight-bold;
+}
+
+h6 {
+  font-size: $font-size-h6;
+}
+
+a {
+  font-size: $font-size-a;
+  font-weight: $font-weight-md;
+  color: $color-dark;
+}
+
+/// BUTTONS
+
+.main-btn {
+  @include button($main-color, $main-color, $transition-sm);
+  text-align: center;
+  color: $color-white;
+  border: $border-sm;
+  overflow: hidden;
+  border-radius: $border-radius-main-btn;
+  font-weight: $font-weight-md;
+  letter-spacing: -0.04em;
+  font-size: $font-size-main-btn;
+  &:hover {
+    @include button($color-blue, $color-blue, $transition-md);
+  }
+}
+
+/// RESPONSIVE
+
+@media (max-width: 599px) {
+  h6{
+      font-size: 17px;
+  }
+  span{
+      font-size: 14px;
+  }
+  a {
+    font-size: 12px;
+  }
+
+  .main-btn {
+    font-size: 11px;
+    box-shadow: 0 17px 29px -7px $main-color;
+  }
+}
+@media (min-width: 600px) {
+}
+@media (min-width: 900px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1800px) {
+}

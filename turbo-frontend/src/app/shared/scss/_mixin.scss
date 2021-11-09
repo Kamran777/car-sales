@@ -1,0 +1,61 @@
+/// BUTTONS
+
+@mixin button($background-color, $border, $transition) {
+  background-color: $background-color;
+  border: $border;
+  transition: $transition;
+}
+
+@mixin box-shadow-btn($color) {
+  box-shadow: 0 27px 35px -8px $color;
+}
+
+/// BACKGROUND IMAGES
+
+@mixin bg-images($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+/// WIDTH HEIGHT
+
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+/// HAMBURGER MENU
+
+@mixin hamburger-menu-icon-line($width, $margin-right) {
+  width: $width;
+  margin-right: $margin-right;
+}
+
+/// RESPONSIVE
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
