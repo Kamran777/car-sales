@@ -1,3 +1,4 @@
+import { FilterPanelComponent } from './components/filter-panel/filter-panel.component';
 import { SocialIconsComponent } from './components/social-icons/social-icons.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -12,7 +13,8 @@ import { AppComponent } from './app.component';
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    SocialIconsComponent
+    SocialIconsComponent,
+    FilterPanelComponent
   ],
   imports: [
     BrowserModule,

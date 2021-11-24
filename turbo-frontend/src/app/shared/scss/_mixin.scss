@@ -1,3 +1,5 @@
+$extra-btn-border: 2px solid $main-color;
+
 /// BUTTONS
 
 @mixin button($background-color, $border, $transition) {
@@ -8,6 +10,13 @@
 
 @mixin box-shadow-btn($color) {
   box-shadow: 0 27px 35px -8px $color;
+}
+
+@mixin extra-btn() {
+  border: $extra-btn-border;
+  border-radius: $border-radius-md;
+  padding: 10px 50px;
+  font-size: $font-size-extra-btn;
 }
 
 /// BACKGROUND IMAGES
