@@ -1,0 +1,126 @@
+@import "../../app.component.scss";
+
+$img-border-radius: 10px 10px 0px 0px;
+$card-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$card-box-shadow-hover: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+  rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+  rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+  rgba(0, 0, 0, 0.07) 0px 32px 64px;
+$tooltip-arrow-after-border-width: 8px 6px 0 6px;
+$font-size-heart-icon: 17px;
+
+.most-viewed {
+  display: flex;
+
+  /// CARD STYLE
+  .card {
+    @include wh(229px, 266px);
+    margin-right: 35px;
+    border: $border-none;
+    box-shadow: $card-box-shadow;
+    border-radius: $border-radius-md;
+    &:hover {
+      box-shadow: $card-box-shadow-hover;
+    }
+
+    img {
+      @include wh(229px, 170px);
+      flex-shrink: 0;
+      object-fit: cover;
+      border-radius: $img-border-radius;
+    }
+
+    .card-body {
+      h5,
+      .card-text {
+        position: relative;
+        margin-top: -9px !important;
+      }
+      .card-text{
+        margin: 0;
+      }
+      span {
+        font-size: $font-size-span-md;
+        color: $color-gray;
+      }
+    }
+    .salon-text,
+    .barter-icon,
+    .credit-icon,
+    .heart-icon {
+      color: $color-white;
+    }
+    .barter-icon,
+    .credit-icon {
+      font-size: $font-size-card-left-icon;
+      border-radius: $border-radius-rounded;
+      padding: 6px 7px;
+    }
+    .barter-icon {
+      margin-right: 7px;
+      background: $color-green;
+    }
+    .credit-icon {
+      background: $color-blue;
+    }
+    .salon-text,
+    .icons {
+      position: absolute;
+    }
+    .salon-text {
+      top: 139px;
+      left: 11px;
+      background: $main-color;
+      border-radius: $border-radius-sm;
+      padding: 2px 8px;
+      font-size: $font-size-p-tag-sm;
+    }
+    .icons {
+      left: 11px;
+      top: 11px;
+      display: flex;
+      width: 100%;
+      .right-icons {
+        margin-left: auto;
+        right: 23px;
+        position: absolute;
+      }
+    }
+  }
+}
+
+/// TOOLTIP ARROW
+::ng-deep {
+  .tooltip-arrow {
+    overflow: visible !important;
+    position: relative;
+    &:after {
+      content: " ";
+      position: absolute;
+      bottom: 26px;
+      left: 8px;
+      border-style: solid;
+      border-width: $tooltip-arrow-after-border-width;
+      transform: rotate(180deg);
+    }
+  }
+  .barter-icon-bg {
+    background-color: $color-green !important;
+    left: 27%;
+    &:after {
+      border-color: $color-green transparent transparent transparent;
+    }
+  }
+  .credit-icon-bg {
+    background-color: $color-blue !important;
+    left: 18%;
+    &:after {
+      border-color: $color-blue transparent transparent transparent;
+    }
+  }
+  .heart-icon {
+    font-size: $font-size-heart-icon;
+    top: 2px;
+    position: relative;
+  }
+}
