@@ -1,3 +1,4 @@
+import { SpinnerComponent } from './components/shared/spinner/spinner.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -28,7 +29,8 @@ import { MostViewedComponent } from './components/most-viewed/most-viewed.compon
     MostViewedComponent,
     ContactComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
