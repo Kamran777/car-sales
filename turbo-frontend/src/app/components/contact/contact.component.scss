@@ -1,0 +1,21 @@
+@import '../../app.component.scss';
+
+#contact{
+    margin-top: 6%;
+    .contact-title{
+        font-weight: 700;
+    }
+    .contact-img{
+        border-radius: 10px;
+    }
+    form{
+        label{
+            margin-top: 3%;
+            font-weight: 700;
+        }
+        input{
+            margin-top: 1%;
+            width: 50%;
+        }
+    }
+}

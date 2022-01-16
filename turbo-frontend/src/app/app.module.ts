@@ -1,3 +1,6 @@
+import { ContactComponent } from './components/contact/contact.component';
+import { MostViewedComponent } from './components/most-viewed/most-viewed.component';
+import { LatestPostsComponent } from './components/latest-posts/latest-posts.component';
 import { SharedModule } from './shared/modules/shared.module';
 import { CarsCardComponent } from './components/cars-card/cars-card.component';
 import { FilterPanelComponent } from './components/filter-panel/filter-panel.component';
@@ -18,7 +21,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     NavbarComponent,
     SocialIconsComponent,
-    FilterPanelComponent
+    FilterPanelComponent,
+    LatestPostsComponent,
+    MostViewedComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

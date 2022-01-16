@@ -1,37 +1,48 @@
 <!-- HEADER TEXT -->
-<h5 class="mt-5">Most Viewed</h5>
+<h5 class="mt-5">{{ headerText }}</h5>
 
 <hr>
 
 <!-- CARDS SECTION -->
 <div class="most-viewed">
-  <div class="card mt-2 mb-3 d-block col-6" *ngFor="let car of cars">
+  <div class="container">
+    <div class="row">
+      <div class="card mt-2 mb-3 d-block col-6" *ngFor="let car of cars">
 
-    <img class="card-img-top" [src]="car.img">
-
-    <!-- START ICONS -->
-    <div class="icons">
-      <div class="left-icons">
-        <i class="fas fa-sync-alt barter-icon" #tooltip="matTooltip" matTooltip="Barter is possible"
-          matTooltipPosition="below" matTooltipClass="tooltip-arrow barter-icon-bg"></i>
-        <i class="fas fa-percent credit-icon" #tooltip="matTooltip" matTooltip="On Credit" matTooltipPosition="below"
-          matTooltipClass="tooltip-arrow credit-icon-bg"></i>
-      </div>
-
-      <div class="right-icons">
-        <i class="far fa-heart heart-icon"></i>
-      </div>
-    </div>
-    <!-- END ICONS -->
-
-    <p *ngIf="car.salon" class="salon-text">Salon</p>
-
-    <div class="card-body">
-      <h5>{{car.price}}$</h5>
-      <p class="card-text">{{car.mark}} {{car.model}}</p>
-      <p class="card-text">{{car.year}}, {{car.motor}} L, {{car.km}} km</p>
-      <span>{{car.city}}, 26.11.2021 3:13</span>
-    </div>
+        <img class="card-img-top" [src]="car.img">
     
+        <!-- START ICONS -->
+        <div class="icons">
+          <div class="left-icons">
+            <i class="fas fa-sync-alt barter-icon" #tooltip="matTooltip" matTooltip="Barter is possible"
+              matTooltipPosition="below" matTooltipClass="tooltip-arrow barter-icon-bg"></i>
+            <i class="fas fa-percent credit-icon" #tooltip="matTooltip" matTooltip="On Credit" matTooltipPosition="below"
+              matTooltipClass="tooltip-arrow credit-icon-bg"></i>
+          </div>
+    
+          <div class="right-icons">
+            <i class="far fa-heart heart-icon"></i>
+          </div>
+        </div>
+        <!-- END ICONS -->
+    
+        <div class="bottom-text-and-icon">
+          <div class="left">
+            <p *ngIf="car.salon" class="salon-text">Salon</p>
+          </div>
+          <div *ngIf="isPremium" class="right">
+            <i class="fas fa-crown"></i>
+          </div>
+        </div>
+    
+        <div class="card-body">
+          <h5>{{car.price}}$</h5>
+          <p class="card-text">{{car.mark}} {{car.model}}</p>
+          <p class="card-text">{{car.year}}, {{car.motor}} L, {{car.km}} km</p>
+          <span>{{car.city}}, 26.11.2021 3:13</span>
+        </div>
+        
+      </div>
+    </div>
   </div>
 </div>

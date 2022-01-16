@@ -28,6 +28,8 @@ $font-size-heart-icon: 17px;
       flex-shrink: 0;
       object-fit: cover;
       border-radius: $img-border-radius;
+      position: relative;
+      right: 12px;
     }
 
     .card-body {
@@ -75,15 +77,27 @@ $font-size-heart-icon: 17px;
       padding: 2px 8px;
       font-size: $font-size-p-tag-sm;
     }
+    .bottom-text-and-icon, .icons{
+      display: flex;
+      width: 100%;
+      .right, .right-icons{
+        margin-left: auto;
+        position: absolute;
+      }
+    }
+    .bottom-text-and-icon{
+      .right{
+        right: 9px;
+        bottom: 103px;
+        color: gold;
+        font-size: 11px;
+      }
+    }
     .icons {
       left: 11px;
       top: 11px;
-      display: flex;
-      width: 100%;
       .right-icons {
-        margin-left: auto;
         right: 23px;
-        position: absolute;
       }
     }
   }
